@@ -13,6 +13,8 @@ jobs:
       - name: Audit URLs using Lighthouse
         uses: treosh/lighthouse-ci-action@v8
         with:
+          urls: |
+            https://localhost:3000.com
           runs: 3
           budgetPath: ./budget.json # test performance budgets
           uploadArtifacts: true # save results as an action artifacts

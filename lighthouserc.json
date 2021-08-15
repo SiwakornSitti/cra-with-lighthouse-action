@@ -3,7 +3,6 @@
     "collect": {
       "startServerCommand": "http-server ./build -p 3000 -b",
       "startServerReadyPattern": "Available on",
-      "numberOfRuns": 1
     },
     "assert": {
       "preset": "lighthouse:recommended",

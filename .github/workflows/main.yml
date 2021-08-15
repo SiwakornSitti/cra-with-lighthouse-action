@@ -1,7 +1,7 @@
 name: Lighthouse CI
 on: push
 jobs:
-  Lighthouse:
+  lighthouse:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -14,15 +14,12 @@ jobs:
         uses: treosh/lighthouse-ci-action@v8
         with:
           urls: |
-            http://localhost:3000
+            https://localhost:3000
           runs: 3
           budgetPath: ./budget.json # test performance budgets
           uploadArtifacts: true # save results as an action artifacts
           temporaryPublicStorage: true # upload lighthouse report to the temporary storage
           configPath: './lighthouserc.json'
-  Report:
-    runs-on: ubuntu-latest
-    steps:
       - name: Lighthouse Report
         uses: manrueda/lighthouse-report-action@v1.1.2
         with:

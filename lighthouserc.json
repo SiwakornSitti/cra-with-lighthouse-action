@@ -2,7 +2,7 @@
   "ci": {
     "collect": {
       "startServerCommand": "http-server ./build -p 3000 -b",
-      "startServerReadyPattern": "Available on",
+      "startServerReadyPattern": "Available on"
     },
     "assert": {
       "preset": "lighthouse:recommended",
